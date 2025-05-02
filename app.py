@@ -7,7 +7,6 @@ from emailing import send_email
 from threading import Thread
 
 # Streamlit UI
-st.set_page_config(page_title= "Motion Detector",page_icon= "sensor.png",layout="centered",)
 st.title("Motion Detection Web App")
 start_button = st.button("Start Camera")
 stop_button = st.button("Stop Camera")
@@ -76,7 +75,6 @@ if st.session_state.run:
             email_thread.daemon = True
             cleaning_thread = Thread(target=clear_images_folder)
             cleaning_thread.daemon = True
-
             email_thread.start()
 
         # Display the frame in Streamlit
