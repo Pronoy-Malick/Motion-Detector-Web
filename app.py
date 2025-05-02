@@ -7,7 +7,7 @@ from emailing import send_email
 from threading import Thread
 
 # Streamlit UI
-st.set_page_config(page_title= "Motion Detector", layout="centered")
+st.set_page_config(page_title= "Motion Detector",page_icon= "sensor.png",layout="centered",)
 st.title("Motion Detection Web App")
 start_button = st.button("Start Camera")
 stop_button = st.button("Stop Camera")
